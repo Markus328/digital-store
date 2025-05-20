@@ -1,10 +1,11 @@
+import Welcome from "../components/Welcome.jsx";
 const Home = ({ message }) => {
-  return (
-    <div>
-      <h1>Home</h1>
-      <p>{message}</p>
-    </div>
-  );
+	return (
+		<Welcome>
+			<h1>Home</h1>
+			<p>{message}</p>
+		</Welcome>
+	);
 };
 
 export default Home;

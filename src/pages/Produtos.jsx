@@ -1,10 +1,11 @@
+import Welcome from "../components/Welcome.jsx";
 const Produtos = () => {
-  return (
-    <div>
-      <h1>Produtos</h1>
-      <p>Produtos da Digital Store</p>
-    </div>
-  );
+	return (
+		<Welcome>
+			<h1>Produtos</h1>
+			<p>Produtos da Digital Store</p>
+		</Welcome>
+	);
 };
 
 export default Produtos;
