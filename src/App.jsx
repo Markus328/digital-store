@@ -7,9 +7,9 @@ import {
 import "./index.css";
 import Layout from "./Layout.jsx";
 import Home from "./pages/Home.jsx";
-import Produtos from "./pages/Produtos.jsx";
-import Categorias from "./pages/Categorias.jsx";
-import Pedidos from "./pages/Pedidos.jsx";
+import Produtos from "./pages/Products.jsx";
+import Categorias from "./pages/ProductCategories.jsx";
+import Pedidos from "./pages/Orders.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 const App = () => {
