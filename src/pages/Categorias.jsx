@@ -1,9 +1,10 @@
+import Welcome from "../components/Welcome.jsx";
 const Categorias = () => {
   return (
-    <div>
+    <Welcome>
       <h1>Categorias</h1>
       <p>Categorias da Digital Store</p>
-    </div>
+    </Welcome>
   );
 };
 
