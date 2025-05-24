@@ -5,7 +5,6 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import "./index.css";
-import Layout from "./Layout.jsx";
 import Home from "./pages/Home.jsx";
 import Produtos from "./pages/Products.jsx";
 import Categorias from "./pages/ProductCategories.jsx";
@@ -17,13 +16,11 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home message="Olá, mundo!" />} />
-            <Route path="produtos" element={<Produtos />} />
-            <Route path="categorias" element={<Categorias />} />
-            <Route path="pedidos" element={<Pedidos />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/produtos" element={<Produtos />} />
+          <Route path="/categorias" element={<Categorias />} />
+          <Route path="/pedidos" element={<Pedidos />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>

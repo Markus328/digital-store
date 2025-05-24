@@ -1,11 +1,11 @@
-import Welcome from "../components/Welcome.jsx";
+import Layout from "../pages/Layout.jsx";
 const Pedidos = () => {
-	return (
-		<Welcome>
-			<h1>Pedidos</h1>
-			<p>Meus Pedidos</p>
-		</Welcome>
-	);
+  return (
+    <Layout>
+      <h2 className="text-2xl font-bold">Pedidos</h2>
+      <p>Meus Pedidos</p>
+    </Layout>
+  );
 };
 
 export default Pedidos;

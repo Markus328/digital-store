@@ -1,10 +1,10 @@
-import Welcome from "../components/Welcome.jsx";
+import Layout from "../pages/Layout.jsx";
 const Categorias = () => {
   return (
-    <Welcome>
-      <h1>Categorias</h1>
+    <Layout>
+      <h2 className="text-2xl font-bold">Categorias</h2>
       <p>Categorias da Digital Store</p>
-    </Welcome>
+    </Layout>
   );
 };
 
