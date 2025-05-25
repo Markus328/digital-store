@@ -1,8 +1,10 @@
 import NavBar from "../components/NavBar.jsx";
 import Logo from "../assets/logo.png"
 import MiniCart from "../assets/mini-cart.svg"
+import { Link } from "react-router-dom";
 
-const Header = () => {
+
+const Header = ({onOpenForm} ) => {
   return (
     <>
       <header>
@@ -31,13 +33,13 @@ const Header = () => {
 
 
           <div className="flex gap-8 ">
-            {/* link para a página de cadastre-se */}
-            {/* link para a página de logar*/}
-            <button class=" cursor-pointer text-[16px] font-normal font-['Inter'] text-gray-700 underline underline-offset-4 decoration-1 tracking-[1.00px] text-base leading-7 hover:text-gray-900 transition-colors duration-200">Cadastre-se</button>
+            <Link to="/registerpage">
+            <button class="to=/registerpage cursor-pointer text-[16px] font-normal font-['Inter'] text-gray-700 underline underline-offset-4 decoration-1 tracking-[1.00px] text-base leading-7 hover:text-gray-900 transition-colors duration-200">Cadastre-se</button>
+            </Link>
+            <Link to="/loginpages">
             <button class=" cursor-pointer w-[114px] h-[40px] bg-[#C92071] text-white rounded-lg font-semibold hover:bg-[#e03b8e] transition-colors duration-200">Entrar</button>
-            
+            </Link>
           </div>
-
           <div>
             <button class="cursor-pointer">
               <img src={MiniCart} alt="carrinho" />
