@@ -5,9 +5,10 @@ import MiniCart from "../assets/mini-cart.svg";
 const Header = () => {
   return (
     <>
-      <header>
-        <div className="flex justify-evenly mb-4 items-center">
+      <header className="flex flex-col px-16 gap-4">
+        <div className="flex justify-between mb-4 items-center">
           <div>
+            {/* FIXME: usar svg ao invés de png */}
             <img src={Logo} alt="logo" />
           </div>
 
