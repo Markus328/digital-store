@@ -1,4 +1,3 @@
-import React from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import TenisLogin from "../assets/tenis-login.png";
@@ -19,30 +18,20 @@ export default function LoginForm() {
               <input
                 type="text"
                 placeholder="Insira seu login ou email"
-                className="w-full p-3 bg-[#f7f7f7] text-[#474747] border border-transparent focus:border-pink-600 focus:ring-0 rounded-lg"
-                required
-              />
+                className="w-full p-3 bg-[#f7f7f7] text-[#474747] border border-transparent focus:ring-0 rounded-lg" required/>
             </div>
-
             <div>
               <label className="block mb-1 font-medium">Senha *</label>
               <input
                 type="password"
                 placeholder="Insira sua senha"
-                className="w-full p-3 bg-[#f7f7f7] text-[#474747] border border-transparent focus:border-pink-600 focus:ring-0 rounded-lg"
-                required
-              />
+                className="w-full p-3 bg-[#f7f7f7] text-[#474747] border border-transparent focus:ring-0 rounded-lg" required/>
             </div>
 
             <div className="text-sm text-left">
               <a href="#" className="hover:text-pink-600 underline">Esqueci minha senha</a>
             </div>
-            <button
-              type="submit"
-              className="w-full bg-pink-600 text-white py-3 rounded-md font-semibold hover:bg-pink-700 transition"
-            >
-              Acessar Conta
-            </button>
+              <button type="submit"className="w-full bg-pink-600 text-white py-3 rounded-md font-semibold hover:bg-pink-700 transition">Acessar Conta</button>
             <div className="text-center text-sm text-gray-600">Ou faça login com</div>
             <div className="flex justify-center gap-4 text-xl">
               <button type="button"><FcGoogle /></button>
@@ -50,14 +39,13 @@ export default function LoginForm() {
             </div>
           </form>
         </div>
-        <div className="hidden md:block">
-          <img
-            src={TenisLogin}
-            alt="Tênis"
-            className="w-full max-w-lg mx-auto"
-          />
+          <div className="hidden md:block">
+            <img
+              src={TenisLogin}
+             alt="Tênis"
+             className="w-full max-w-lg mx-auto"/>
+          </div>
         </div>
-      </div>
-    </div>
+     </div>
   );
 }
