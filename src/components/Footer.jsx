@@ -50,6 +50,7 @@ const Footer = () => {
               <FaTwitter className="hover:text-(--primary) cursor-pointer" />
             </div>
           </div>
+          {/* FIXME: adicionar o componente de informações e usar para formar as colunas */}
           <div className="ml-20">
             <h3 className="font-bold mb-4">Informação</h3>
             <ul className="space-y-2 text-sm ">
@@ -83,9 +84,8 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="border-t border-gray-600 mt-12 pt-4 text-center text-sm">
-          © 2025 Digital College
-        </div>
+        <hr className="text-(--dark-gray-3) mt-12 mb-5" />
+        <p className="text-sm text-center">© 2025 Digital College</p>
       </Cor>
     </footer>
   );
