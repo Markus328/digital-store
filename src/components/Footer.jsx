@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import LogoFooter from "../assets/logo-footer.svg";
+import Logo from "../components/Logo.jsx";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import styled from "styled-components";
 
@@ -35,9 +35,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-20">
           <div>
             <div className="flex items-center gap-2 text-xl font-bold">
-              <Link target="_self" href="#">
-                <img src={LogoFooter} alt="Logo Digital Store" />
-              </Link>
+              <Logo color="white" />
             </div>
             <p className="mt-4 text-sm text-justify indent-8">
               Na Digital Store, estilo e conforto andam juntos. Oferecemos moda

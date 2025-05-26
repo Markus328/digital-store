@@ -1,5 +1,5 @@
 import NavBar from "../components/NavBar.jsx";
-import Logo from "../assets/logo.png";
+import Logo from "../components/Logo.jsx";
 import MiniCart from "../assets/mini-cart.svg";
 
 const Header = () => {
@@ -8,8 +8,7 @@ const Header = () => {
       <header className="flex flex-col px-16 gap-4">
         <div className="flex justify-between mb-4 items-center">
           <div>
-            {/* FIXME: usar svg ao invés de png */}
-            <img src={Logo} alt="logo" />
+            <Logo color="primary" />
           </div>
 
           <div class="flex items-center bg-(--light-gray-3) rounded-[8px] px-4 py-3 w-full max-w-md">
