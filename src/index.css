@@ -25,8 +25,21 @@
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
+	letter-spacing: 0.25px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 768px) {
+	:root {
+		letter-spacing: 0.5px;
+	}
+}
+
+@media (min-width: 1080px) {
+	:root {
+		letter-spacing: 0.75px;
+	}
 }
 
 html,
