@@ -6,6 +6,7 @@ const DynamicImage = ({
   name,
   width = "100%",
   height = "100%",
+  className = "",
   rotation,
 }) => {
   const [imgUrl, setImgUrl] = useState(null);
@@ -74,7 +75,13 @@ const DynamicImage = ({
       className="flex items-center justify-center p-0"
       style={containerStyle}
     >
-      <img src={imgUrl} alt={name} style={combinedStyle} ref={imgRef} />
+      <img
+        src={imgUrl}
+        alt={name}
+        style={combinedStyle}
+        ref={imgRef}
+        className={className}
+      />
     </div>
   );
 };

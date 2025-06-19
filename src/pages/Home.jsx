@@ -1,9 +1,10 @@
 import Layout from "../pages/Layout.jsx";
 import Section from "../components/Section.jsx";
 import ProductListing from "../components/ProductListing.jsx";
+import BestOffer from "../components/BestOffer.jsx";
 
 const ProductsHomeList = () => {
-  const products = Array.from({ length: 8 }, (_, index) => ({
+  const products = Array.from({ length: 8 }, () => ({
     name: "K-Swiss V8 - Masculino",
     itemType: "Tênis",
     price: 200,
@@ -16,10 +17,10 @@ const ProductsHomeList = () => {
 
 const Home = () => {
   return (
-    <Layout className="px-10 bg-(--light-gray-3)">
+    <Layout className="px-10">
       {/* component simples de seção */}
       <section id="best-offers">
-        {/* TODO: Adicionar componente de melhores ofertas */}
+        <BestOffer />
       </section>
 
       <Section id="collections-1" title="Coleções em destaque">
