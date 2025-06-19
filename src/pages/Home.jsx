@@ -2,6 +2,7 @@ import Layout from "../pages/Layout.jsx";
 import Section from "../components/Section.jsx";
 import ProductListing from "../components/ProductListing.jsx";
 import BestOffer from "../components/BestOffer.jsx";
+import SpecialOffer from "../components/SpecialOffer.jsx";
 
 const ProductsHomeList = () => {
   const products = Array.from({ length: 8 }, () => ({
@@ -37,6 +38,9 @@ const Home = () => {
       >
         <ProductsHomeList />
       </Section>
+      <section id="SpecialOffer">
+        <SpecialOffer />
+      </section>
     </Layout>
   );
 };

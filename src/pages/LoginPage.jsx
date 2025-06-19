@@ -9,6 +9,7 @@ const RegisterPage = () => {
         <LoginForm/>
       <Footer />
     </div>
+
   );
 };
 
