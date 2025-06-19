@@ -3,6 +3,8 @@ import Section from "../components/Section.jsx";
 import ProductListing from "../components/ProductListing.jsx";
 import BestOffer from "../components/BestOffer.jsx";
 import SpecialOffer from "../components/SpecialOffer.jsx";
+import FeaturedCollections from "../components/FeaturedCollections.jsx";
+import CollectionsIcons from "../components/CollectionsIcons.jsx";
 
 const ProductsHomeList = () => {
   const products = Array.from({ length: 8 }, () => ({
@@ -25,10 +27,10 @@ const Home = () => {
       </section>
 
       <Section id="collections-1" title="Coleções em destaque">
-        {/* TODO: Adicionar componente de coleção 1 */}
+        <FeaturedCollections />
       </Section>
       <Section id="collections-2" title="Coleções em destaque">
-        {/* TODO: Adicionar componente de coleção 2 */}
+        <CollectionsIcons />
       </Section>
 
       <Section
