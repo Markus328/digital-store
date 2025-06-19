@@ -3,16 +3,14 @@ import Section from "../components/Section.jsx";
 import ProductListing from "../components/ProductListing.jsx";
 
 const ProductsHomeList = () => {
-  const products = Array.from({ length: 8 }, () => {
-    return {
-      name: "K-Swiss V8 - Masculino",
-      itemType: "Tênis",
-      price: 200,
-      priceDiscount: 100,
-      image: "tenis-produto.png",
-    };
-  });
-  console.log(products);
+  const products = Array.from({ length: 8 }, (_, index) => ({
+    name: "K-Swiss V8 - Masculino",
+    itemType: "Tênis",
+    price: 200,
+    priceDiscount: 100,
+    image: "tenis-produto.png",
+    rotation: "-30deg",
+  }));
   return <ProductListing id="products-list-home" products={products} />;
 };
 
