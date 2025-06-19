@@ -10,6 +10,9 @@ import Produtos from "./pages/Products.jsx";
 import Categorias from "./pages/ProductCategories.jsx";
 import Pedidos from "./pages/Orders.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage.jsx"
+
 
 const App = () => {
   return (
@@ -21,6 +24,8 @@ const App = () => {
           <Route path="/categorias" element={<Categorias />} />
           <Route path="/pedidos" element={<Pedidos />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/registerpage" element={<RegisterPage/>} />
+          <Route path="/loginpages" element={<LoginPage/>}></Route>
         </Routes>
       </BrowserRouter>
     </>

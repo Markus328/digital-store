@@ -2,17 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
+import RegisterForm from "../components/RegisterForm.jsx"
 
-const Layout = ({ children, className, style }) => {
+const RegisterPage = () => {
   return (
-    <div className={`w-full h-full flex flex-col`}>
+    <div className="w-full h-full flex flex-col">
       <Header />
-      <main className={`mt-15 ${className}`} style={style}>
-        {children}
-      </main>
+        <RegisterForm/>
       <Footer />
     </div>
   );
 };
 
-export default Layout;
+export default RegisterPage;
