@@ -10,6 +10,7 @@
 	background-color: var(--white);
 
 	--primary: #c92071;
+	--light-primary: #e03b8e;
 	--secondary: #b5b6f2;
 	--tertiary: #991956;
 	--error: #ee4266;
@@ -25,8 +26,21 @@
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
+	letter-spacing: 0.25px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 768px) {
+	:root {
+		letter-spacing: 0.5px;
+	}
+}
+
+@media (min-width: 1080px) {
+	:root {
+		letter-spacing: 0.75px;
+	}
 }
 
 html,
@@ -34,8 +48,4 @@ body,
 #root {
 	height: 100%;
 	width: auto;
-}
-
-#root {
-	margin: 1em 1.5em;
 }
