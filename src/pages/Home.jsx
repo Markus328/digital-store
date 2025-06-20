@@ -14,6 +14,7 @@ const ProductsHomeList = () => {
     priceDiscount: 100,
     image: "tenis-produto.png",
     rotation: "-30deg",
+    scale: "1.25",
   }));
   return <ProductListing id="products-list-home" products={products} />;
 };

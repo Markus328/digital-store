@@ -14,6 +14,7 @@ const ProductListing = ({ products }) => {
             price={product?.price}
             priceDiscount={product?.priceDiscount}
             rotation={product?.rotation}
+            scale={product?.scale}
           />
         ))
       ) : (
