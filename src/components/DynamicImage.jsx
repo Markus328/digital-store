@@ -6,7 +6,8 @@ const DynamicImage = ({
   name,
   width = "100%",
   height = "100%",
-  rotation,
+  rotation = "0deg",
+  scale = "0",
 }) => {
   const [imgUrl, setImgUrl] = useState(null);
   const [imgRatio, setImgRatio] = useState(1);
@@ -67,8 +68,8 @@ const DynamicImage = ({
       height: height,
     };
     if (rotation && isImageLoaded) {
-      const imageScale = calculateImageNewScale(imgRatio, rotation);
-      console.log("imageScale", imageScale);
+      const imageScale =
+        calculateImageNewScale(imgRatio, rotation) * (parseFloat(scale) || 1);
       setCombinedStyle({
         ...baseStyle,
         transform: `rotate(${rotation}) scale(${imageScale})`,
