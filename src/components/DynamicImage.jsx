@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import imageLoader from "../assets/imageLoader.js";
 
 const DynamicImage = ({
@@ -6,13 +6,21 @@ const DynamicImage = ({
   name,
   width = "100%",
   height = "100%",
+  rotation = "0deg",
+  scale = "0",
   className = "",
-  rotation,
 }) => {
   const [imgUrl, setImgUrl] = useState(null);
+  const [imgRatio, setImgRatio] = useState(1);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const imgRef = useRef(null);
 
   useEffect(() => {
-    if (!asset) return;
+    if (!asset) {
+      setImgUrl(null);
+      setIsImageLoaded(false);
+      return;
+    }
 
     const path = `./${asset}`;
     const importer = imageLoader[path];
@@ -23,64 +31,65 @@ const DynamicImage = ({
       });
     } else {
       setImgUrl(null);
+      setIsImageLoaded(false);
     }
   }, [asset]);
 
-  const [combinedStyle, setCombinedStyle] = useState({});
-  const [containerStyle, setContainerStyle] = useState({});
-  const imgRef = useRef(null);
+  const calculateImageNewScale = useCallback((ratio, rotation) => {
+    const angle = parseFloat(rotation) || 0;
+    const width = ratio;
+    const height = 1;
 
-  // Essa função calcula a escala da imagem para que ela caiba no container sem ser cortada
-  const calculateImageNewScale = (width, height, rotation) => {
-    const angle = parseFloat(rotation);
     const radians = (angle * Math.PI) / 180;
     const absCos = Math.abs(Math.cos(radians));
     const absSin = Math.abs(Math.sin(radians));
     const fullWidth = width * absCos + height * absSin;
     const fullHeight = width * absSin + height * absCos;
 
-    console.log(
-      `width: ${width}, height: ${height}, rotation: ${rotation}, fullWidth: ${fullWidth}, fullHeight: ${fullHeight}`,
-    );
-
-    // Retorna a menor escala possível para que a imagem
     return Math.min(width / fullWidth, height / fullHeight);
-  };
+  }, []);
 
-  useEffect(() => {
-    setCombinedStyle({
-      width: width,
-      height: height,
-    });
-
-    if (rotation) {
-      // valores de width e height antes de redimensionamentos, porém úteis para o cálculo.
+  const handleImageLoad = useCallback(() => {
+    if (imgRef.current) {
       const { width: width_ratio, height: height_ratio } =
         imgRef.current.getBoundingClientRect();
-      const imageScale = calculateImageNewScale(
-        width_ratio,
-        height_ratio,
-        rotation,
-      );
+      setImgRatio(width_ratio / height_ratio);
+      setIsImageLoaded(true);
+    }
+  }, []);
+
+  const [combinedStyle, setCombinedStyle] = useState({});
+  useEffect(() => {
+    const baseStyle = {
+      width: width,
+      height: height,
+    };
+    if (rotation && isImageLoaded) {
+      const imageScale =
+        calculateImageNewScale(imgRatio, rotation) * (parseFloat(scale) || 1);
       setCombinedStyle({
-        width: width,
-        height: height,
+        ...baseStyle,
         transform: `rotate(${rotation}) scale(${imageScale})`,
       });
-    }
-  }, [imgUrl, rotation, width, height]);
-
+    } else setCombinedStyle(baseStyle);
+  }, [
+    calculateImageNewScale,
+    height,
+    imgRatio,
+    isImageLoaded,
+    rotation,
+    scale,
+    width,
+  ]);
   return (
-    <div
-      className="flex items-center justify-center p-0"
-      style={containerStyle}
-    >
+    <div className="flex items-center justify-center p-2">
       <img
         src={imgUrl}
         alt={name}
         style={combinedStyle}
         ref={imgRef}
         className={className}
+        onLoad={handleImageLoad}
       />
     </div>
   );
