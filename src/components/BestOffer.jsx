@@ -6,6 +6,8 @@ const BestOffer = ({
     {
       image: "snakers-branco.png",
       title: "Queima de estoque Nike 🔥",
+      rotation: "-20deg",
+      scale: "1.5",
       subtitle: "Melhores ofertas personalizadas",
       description:
         "Consequat culpa exercitation elit nisl excepteur dolore tempor laboris eiusmod irure consectetur.",
@@ -99,6 +101,8 @@ const BestOffer = ({
               <DynamicImage
                 asset={currentSlideData.image}
                 name={currentSlideData.title}
+                rotation={currentSlideData.rotation}
+                scale={currentSlideData.scale}
                 className="w-full h-auto max-w-xl mx-auto transform transition-transform duration-700"
               />
             </div>

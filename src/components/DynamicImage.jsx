@@ -15,7 +15,6 @@ const DynamicImage = ({
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const imgRef = useRef(null);
 
-  // Load image effect
   useEffect(() => {
     if (!asset) {
       setImgUrl(null);
@@ -36,7 +35,6 @@ const DynamicImage = ({
     }
   }, [asset]);
 
-  // Calculate image scale function (memoized to prevent recreating on every render)
   const calculateImageNewScale = useCallback((ratio, rotation) => {
     const angle = parseFloat(rotation) || 0;
     const width = ratio;
@@ -51,7 +49,6 @@ const DynamicImage = ({
     return Math.min(width / fullWidth, height / fullHeight);
   }, []);
 
-  // Handle image load to get ratio
   const handleImageLoad = useCallback(() => {
     if (imgRef.current) {
       const { width: width_ratio, height: height_ratio } =
@@ -61,7 +58,6 @@ const DynamicImage = ({
     }
   }, []);
 
-  // Calculate combined style (only when dependencies actually change)
   const [combinedStyle, setCombinedStyle] = useState({});
   useEffect(() => {
     const baseStyle = {
