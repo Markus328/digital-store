@@ -8,6 +8,7 @@ const DynamicImage = ({
   height = "100%",
   rotation = "0deg",
   scale = "0",
+  className = "",
 }) => {
   const [imgUrl, setImgUrl] = useState(null);
   const [imgRatio, setImgRatio] = useState(1);
@@ -81,6 +82,7 @@ const DynamicImage = ({
     imgRatio,
     isImageLoaded,
     rotation,
+    scale,
     width,
   ]);
   return (
@@ -90,7 +92,7 @@ const DynamicImage = ({
         alt={name}
         style={combinedStyle}
         ref={imgRef}
-        className="border"
+        className={className}
         onLoad={handleImageLoad}
       />
     </div>
