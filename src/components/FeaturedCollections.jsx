@@ -1,39 +1,39 @@
-import React from 'react';
-import Camisa from '../assets/shirt-collection.png';
-import Tenis from '../assets/shoe-collection.png';
-import Fone from '../assets/headset-collection.png';
+import React from "react";
+import Camisa from "../assets/collections/shirt-collection.png";
+import Tenis from "../assets/collections/shoe-collection.png";
+import Fone from "../assets/collections/headset-collection.png";
 
 export default function FeaturedCollections() {
   const collections = [
     {
-      title: 'Novo drop Supreme',
+      title: "Novo drop Supreme",
       image: Camisa,
-      discount: '30% OFF',
-      rotation: '-20deg',
-      scaleX: '2',
-      scaleY: '2',
-      translateY: '30%',
-      button: 'Comprar',
+      discount: "30% OFF",
+      rotation: "-20deg",
+      scaleX: "2",
+      scaleY: "2",
+      translateY: "30%",
+      button: "Comprar",
     },
     {
-      title: 'Coleção Adidas',
+      title: "Coleção Adidas",
       image: Tenis,
-      discount: '30% OFF',
-      rotation: '0',
-      scaleX: '-1.5',
-      scaleY: '1.5',
-      translateY: '10%',
-      button: 'Comprar',
+      discount: "30% OFF",
+      rotation: "0",
+      scaleX: "-1.5",
+      scaleY: "1.5",
+      translateY: "10%",
+      button: "Comprar",
     },
     {
-      title: 'Novo Beats Bass',
+      title: "Novo Beats Bass",
       image: Fone,
-      discount: '30% OFF',
-      rotation: '30deg',
-      scaleX: '-1.5',
-      scaleY: '1.5',
-      translateY: '11%',
-      button: 'Comprar',
+      discount: "30% OFF",
+      rotation: "30deg",
+      scaleX: "-1.5",
+      scaleY: "1.5",
+      translateY: "11%",
+      button: "Comprar",
     },
   ];
 
@@ -50,9 +50,7 @@ export default function FeaturedCollections() {
                 {item.discount}
               </span>
 
-              <div className="mt-2 font-semibold text-[32px]">
-                {item.title}
-              </div>
+              <div className="mt-2 font-semibold text-[32px]">{item.title}</div>
 
               <button className="mt-4 bg-white text-pink-600 text-sm font-semibold px-4 py-1 rounded shadow w-[153px] h-[36px] hover:bg-pink-600 hover:text-white hover:shadow-lg hover:scale-105 transform transition-all duration-300">
                 {item.button}

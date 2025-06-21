@@ -1,30 +1,25 @@
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar.jsx";
 import Logo from "../components/Logo.jsx";
-import MiniCart from "../assets/mini-cart.svg";
+import MiniCart from "../assets/icons/mini-cart.svg";
 
-
-import {useLocation} from "react-router-dom"
-
+import { useLocation } from "react-router-dom";
 
 const Header = ({ onOpenForm }) => {
-const location = useLocation();
-const path = location.pathname;
+  const location = useLocation();
+  const path = location.pathname;
 
-if (path === "/loginpages" || path === "/registerpage")
-
-  return
-   <>
-      <header className="flex flex-col px-16 gap-4">
-        <div className="flex justify-between mb-4 items-center">
-          <div>
-            <Logo color="primary" />
-          </div>
-          </div>
-          <NavBar/>
-          </header>
-    </>
-          ;
+  if (path === "/loginpages" || path === "/registerpage") return;
+  <>
+    <header className="flex flex-col px-16 gap-4">
+      <div className="flex justify-between mb-4 items-center">
+        <div>
+          <Logo color="primary" />
+        </div>
+      </div>
+      <NavBar />
+    </header>
+  </>;
   return (
     <>
       <header className="flex flex-col px-16 gap-4">

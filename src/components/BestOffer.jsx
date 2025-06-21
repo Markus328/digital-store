@@ -4,7 +4,7 @@ import DynamicImage from "./DynamicImage.jsx";
 const BestOffer = ({
   slides = [
     {
-      image: "snakers-branco.png",
+      image: "Sneakers-Product.svg",
       title: "Queima de estoque Nike 🔥",
       rotation: "-20deg",
       scale: "1.5",
