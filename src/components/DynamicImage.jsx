@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef, useCallback } from "react";
-import imageLoader from "../assets/imageLoader.js";
+import { images } from "../assets/imageLoader.js";
 
 const DynamicImage = ({
   asset,
@@ -23,7 +23,7 @@ const DynamicImage = ({
     }
 
     const path = `./${asset}`;
-    const importer = imageLoader[path];
+    const importer = images[path];
 
     if (importer) {
       importer().then((mod) => {
