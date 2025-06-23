@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar.jsx";
 import Logo from "../components/Logo.jsx";
-import MiniCart from "../assets/icons/mini-cart.svg";
+import IconLoader from "../components/IconLoader.jsx";
 
 import { useLocation } from "react-router-dom";
 
@@ -34,20 +34,11 @@ const Header = ({ onOpenForm }) => {
               placeholder="Pesquisar produto..."
               class="  flex-grow bg-transparent focus:outline-none text-(--dark-gray) placeholder-(--light-gray)"
             />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-(--light-gray) cursor-pointer"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor "
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"
-              />
-            </svg>
+            <IconLoader
+              name="search"
+              className="text-(--light-gray)"
+              width="18px"
+            />
           </div>
 
           <div className="flex gap-8 ">
@@ -64,7 +55,7 @@ const Header = ({ onOpenForm }) => {
           </div>
           <div>
             <button class="cursor-pointer">
-              <img src={MiniCart} alt="carrinho" />
+              <IconLoader name="mini-cart" className="text-(--primary)" />
             </button>
           </div>
         </div>
