@@ -9,17 +9,19 @@ const Header = ({ onOpenForm }) => {
   const location = useLocation();
   const path = location.pathname;
 
-  if (path === "/loginpages" || path === "/registerpage") return;
-  <>
-    <header className="flex flex-col px-16 gap-4">
-      <div className="flex justify-between mb-4 items-center">
-        <div>
-          <Logo color="primary" />
-        </div>
-      </div>
-      <NavBar />
-    </header>
-  </>;
+  if (path === "/loginpages" || path === "/registerpage")
+    return (
+      <>
+        <header className="flex flex-col px-16 gap-4">
+          <div className="flex justify-between mb-4 items-center">
+            <div>
+              <Logo color="primary" />
+            </div>
+          </div>
+          <NavBar />
+        </header>
+      </>
+    );
   return (
     <>
       <header className="flex flex-col px-16 my-2 gap-4">
