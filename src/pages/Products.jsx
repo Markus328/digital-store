@@ -1,11 +1,10 @@
-import Layout from "../pages/Layout.jsx";
-import CardProduct from "../components/CardProduct.jsx";
-
+import Layout from "./Layout.jsx";
+import ProductSearch from "../components/ProductSearch.jsx";
 
 const Produtos = () => {
   return (
     <Layout>
-      <CardProduct/>
+      <ProductSearch query="Tênis" className="bg-(--light-gray-3) py-10 px-8" />
     </Layout>
   );
 };
