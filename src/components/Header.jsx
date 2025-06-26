@@ -22,7 +22,7 @@ const Header = ({ onOpenForm }) => {
   </>;
   return (
     <>
-      <header className="flex flex-col px-16 gap-4">
+      <header className="flex flex-col px-16 my-2 gap-4">
         <div className="flex justify-between mb-4 items-center">
           <div>
             <Logo color="primary" />
