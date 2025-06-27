@@ -1,4 +1,5 @@
 import DynamicImage from "./DynamicImage.jsx";
+import { Link } from "react-router-dom";
 
 const ProductImage = ({ image, itemType, rotation, scale }) => {
   return (
@@ -24,6 +25,7 @@ const ProductCard = ({
   priceDiscount = price,
   rotation,
   scale,
+  link,
 }) => {
   if (!image) {
     return null;
@@ -40,7 +42,7 @@ const ProductCard = ({
           scale={scale}
         />
         <figcaption className="text-sm md:text-base lg:text-2xl text-ellipsis text-nowrap overflow-hidden">
-          {name}
+          <Link to={link}>{name}</Link>
         </figcaption>
       </figure>
       <div className="flex ml-3 justify-start w-full gap-4">
