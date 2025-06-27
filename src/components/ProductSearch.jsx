@@ -23,6 +23,7 @@ const ProductSearch = ({ query, ...props }) => {
           image: "tenis-produto.png",
           rotation: "-20deg",
           scale: "1.25",
+          link: "/produtos/produto",
         })),
       );
     };

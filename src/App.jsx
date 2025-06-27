@@ -11,8 +11,8 @@ import Categorias from "./pages/ProductCategories.jsx";
 import Pedidos from "./pages/Orders.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import RegisterPage from "./pages/RegisterPage";
-import LoginPage from "./pages/LoginPage.jsx"
-
+import LoginPage from "./pages/LoginPage.jsx";
+import ProdutosProduto from "./pages/ProductsProduct.jsx";
 
 const App = () => {
   return (
@@ -24,8 +24,9 @@ const App = () => {
           <Route path="/categorias" element={<Categorias />} />
           <Route path="/pedidos" element={<Pedidos />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/registerpage" element={<RegisterPage/>} />
-          <Route path="/loginpages" element={<LoginPage/>}></Route>        
+          <Route path="/registerpage" element={<RegisterPage />} />
+          <Route path="/loginpages" element={<LoginPage />}></Route>
+          <Route path="/produtos/produto" element={<ProdutosProduto />}></Route>
         </Routes>
       </BrowserRouter>
     </>
