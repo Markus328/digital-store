@@ -1,6 +1,6 @@
 # Digital Store
 
-Uma loja digital de produtos
+Uma loja digital de produtos. Servidor do projeto: [digital-store-server](https://github.com/Markus328/digital-store-server)
 
 ## Clonagem e Instalação
 
